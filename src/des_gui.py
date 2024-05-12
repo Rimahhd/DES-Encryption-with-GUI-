@@ -16,7 +16,6 @@ def des_encrypt(message, key):
 def encrypt_message():
     message = entryMessage.get().strip()
     key = entryKey.get().strip()
-    num_rounds = int(entryRounds.get())
 
     if len(message) != 16 or len(key) != 16:
         messagebox.showerror("Error", "Message and key should be 16 bytes (32 characters).")
@@ -24,13 +23,12 @@ def encrypt_message():
 
     # Perform DES encryption for specified number of rounds
     ciphertext = message
-    for i in range(num_rounds):
-        ciphertext = des_encrypt(binascii.unhexlify(ciphertext), key)  
-        text_output.insert(tk.END, f"Round {i+1}: Ciphertext: {ciphertext}\n")
+    ciphertext = des_encrypt(binascii.unhexlify(ciphertext), key)  
+    text_output.insert(tk.END, f"Ciphertext: {ciphertext}\n")
 
 # Create the main window
 root = tk.Tk()
-root.title("DES Encryption (RIMAHHD)")
+root.title("DES Encryption RIMAHHD")
 
 # Create input fields
 labelMessage = tk.Label(root, text="Enter your message to encrypt:")
@@ -43,18 +41,14 @@ labelKey.grid(row=1, column=0, padx=10, pady=5)
 entryKey = tk.Entry(root)
 entryKey.grid(row=1, column=1, padx=10, pady=5)
 
-labelRounds = tk.Label(root, text="Enter number of rounds(16):")
-labelRounds.grid(row=2, column=0, padx=10, pady=5)
-entryRounds = tk.Entry(root)
-entryRounds.grid(row=2, column=1, padx=10, pady=5)
 
 # Create encrypt button
 encrypt_button = tk.Button(root, text="Encrypt", command=encrypt_message)
-encrypt_button.grid(row=3, column=0, columnspan=2, padx=10, pady=5)
+encrypt_button.grid(row=2, column=0, columnspan=2, padx=10, pady=5)
 
 # Create output text box
 text_output = tk.Text(root, width=50, height=25)
-text_output.grid(row=4, column=0, columnspan=2, padx=10, pady=5)
+text_output.grid(row=3, column=0, columnspan=2, padx=10, pady=5)
 
 # Run the main event loop
 root.mainloop()
