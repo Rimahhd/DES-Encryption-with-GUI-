@@ -1,5 +1,9 @@
-# DES-Encryption-with-GUI-Program
-Provides Python implementation of DES encryption with CLI and GUI versions. CLI prompts user for message and key, performing encryption in n rounds. GUI offers user-friendly interface for input and encryption.
-![image](https://github.com/Rimahhd/DES-Encryption-with-GUI-/assets/103281992/153c2322-8580-4243-b1e4-cd639c9e422f)
+# DES-Encryption-with-GUI-Program-Using-Tkinter-and-Binascii
+Provides Python implementation of DES encryption with GUI version. The program prompts user for message and key. GUI offers user-friendly interface for input and encryption.
 
-![image](https://github.com/Rimahhd/DES-Encryption-with-GUI-/assets/103281992/96f10cbd-b9ff-477c-9a6c-9438fa1fa771)
+![image](https://github.com/Rimahhd/DES-Encryption-with-GUI-/assets/103281992/4568e6bd-87d7-4d56-b846-30c70df1c36a)
+
+
+![image](https://github.com/Rimahhd/DES-Encryption-with-GUI-/assets/103281992/a9c618d6-c15b-4578-b8e9-e624089c8dbb)
+
+
